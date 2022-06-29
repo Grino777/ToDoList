@@ -7,8 +7,10 @@
 {% endblock %}
 
 {% block css_additional %}
-
+  <link rel="stylesheet" href="{% static 'todoapp/css/indexstyle.css' %}">
 {% endblock %}
 
 {% block content %}
-
+  {% include 'includes/navbar.html' %}
+  <p>MAIN</p>
+{% endblock %}

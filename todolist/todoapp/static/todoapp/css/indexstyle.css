@@ -1,0 +1,12 @@
+body {
+    background-color: pink;
+}
+
+.navigation {
+    background-color: pink;
+    border: 5px solid black
+}
+
+p {
+    color: red;
+}
