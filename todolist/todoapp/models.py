@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 
-class Tasks(models.Model):
+class Task(models.Model):
         class Meta:
             ordering = ['complete']
             verbose_name = 'Задача'

@@ -12,6 +12,10 @@
 
 {% block content %}
 {% include 'includes/navbar.html' %}
+
+<h1>My ToDo List:</h1>
+<a href="{% url 'create-task' %}">Добавить задачу</a>
+
 <table>
     <tr>
         <th>Item</th>
