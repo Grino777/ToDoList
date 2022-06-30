@@ -4,6 +4,11 @@ from django.db import models
 # Create your models here.
 
 class Tasks(models.Model):
+        class Meta:
+            ordering = ['complete']
+            verbose_name = 'Задача'
+            verbose_name_plural = 'Задачи'
+
         user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
         title = models.CharField(max_length=200)
         description = models.TextField(null=True, blank=True)
@@ -13,5 +18,3 @@ class Tasks(models.Model):
         def __str__(self):
             return self.title
 
-        class Meta:
-            ordering = ['complete']

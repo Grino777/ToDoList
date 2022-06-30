@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+  Детальная информация
+{% endblock %}
+
+{% block css_additional %}
+  <link rel="stylesheet" href="{% static 'todoapp/css/indexstyle.css' %}">
+{% endblock %}
+
+{% block content %}
+    <p>Task: {{ task.title }}</p>
+{% endblock %}

@@ -3,14 +3,27 @@
 {% load static %}
 
 {% block title %}
-  Главная
+Главная
 {% endblock %}
 
 {% block css_additional %}
-  <link rel="stylesheet" href="{% static 'todoapp/css/indexstyle.css' %}">
+<link rel="stylesheet" href="{% static 'todoapp/css/indexstyle.css' %}">
 {% endblock %}
 
 {% block content %}
-  {% include 'includes/navbar.html' %}
-  <p>MAIN</p>
+{% include 'includes/navbar.html' %}
+<table>
+    <tr>
+        <th>Item</th>
+        <th></th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td>{{ task.title }}</td>
+        <td><a href="{% url 'task' task.id %}">View</a></td>
+    </tr>
+    {% empty %}
+    <h3>No item in list</h3>
+    {% endfor %}
+</table>
 {% endblock %}
